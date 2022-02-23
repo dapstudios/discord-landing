@@ -1,4 +1,5 @@
 body, html {
+	color: #fff;
 	min-height: 100%;
 }
 
@@ -15,8 +16,9 @@ body {
 	top: 0;
 	left: 0;
 	z-index: 0;
-	width: 100%;
+	width: 100vw;
 	height: 100%;
+	min-height: 100vh;
 	background: rgba(0, 0, 0, 0.8);
 }
 
@@ -35,6 +37,7 @@ body {
 	background-size: cover;
 	background-position: center center;
 	position: relative;
+	margin: 15vh 0;
 }
 
 .header:before {
@@ -73,6 +76,16 @@ body {
 	margin-bottom: 150px;
 	position: relative;
 	z-index: 20;
+}
+
+.server-info h1 {
+	margin: 0;
+}
+
+.server-info p {
+	width: 80%;
+	max-width: 700px;
+	margin: 32px 0 64px;
 }
 
 .inner {
@@ -182,6 +195,8 @@ section.join .line {
 	border-radius: 50%;
 	width: 8rem;
 	height: 8rem;
+	position: relative;
+	z-index: 10;
 }
 
 h1 {
@@ -264,4 +279,27 @@ a.links-suppressor, .links-suppressor a {
 	margin-right: 0.5rem;
 	background: rgb(89, 255, 89);
 	border-radius: 50%;
+}
+
+@media only screen and (max-width: 600px) {
+	.header {
+		margin: 0;
+	}
+
+	.header, .header:before {
+		height: 100%;
+		min-height: 100vh;
+	}
+	
+	.online-counter {
+		display: block;
+		position: relative;
+		margin: 8px auto 32px auto;
+		top: 0; right: 0; left: 0; bottom: 0;
+	}
+
+	.justify-content-between {
+		-ms-flex-pack: start !important;
+		justify-content: start !important;
+	}
 }
